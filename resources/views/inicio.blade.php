@@ -5,15 +5,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Control de Registro de Proveedores - Secretaría de Administración</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+         :root {
+            --color-primario: #9D2449;
+            --color-primario-oscuro: #7a1c38;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            min-height: 100vh;
+            background: linear-gradient(135deg, var(--color-primario), var(--color-primario-oscuro));
+        }
+
+    </style>
 </head>
 
 <body>
     <div>
-        <div>
-            <div>
-                <div>
-                    <img src="{{ asset('imagenes/logo.png') }}" alt="Logo">
-                    <h2>Control de Registro de Proveedores</h2>
+        <div class="card shadow-lg border-0 rounded-4 w-100" style="max-width: 500px;">
+            <div class="card-body p-4 p-md-5">
+                <div class="text-center mb-4">
+                    <img src="{{ asset('imagenes/logo.png') }}" class="img-fluid mb-3" alt="Logo" style="max-width: 250px;">
+                    <h2 class="h3 fw-bold" style="color: #9D2449">Control de Registro de Proveedores</h2>
                 </div>
                 <ul>
                     <li><a id="login-tab" href="#loginForm">Iniciar Sesión</a></li>
