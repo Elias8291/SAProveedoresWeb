@@ -8,20 +8,17 @@
 </head>
 
 <body>
-   
     <div>
         <div>
             <div>
                 <div>
-                    <img src="{{ asset('images/logo1.png') }}" alt="Logo">
+                    <img src="{{ asset('imagenes/logo.png') }}" alt="Logo">
                     <h2>Control de Registro de Proveedores</h2>
                 </div>
-
                 <ul>
                     <li><a id="login-tab" href="#loginForm">Iniciar Sesión</a></li>
                     <li><a id="register-tab" href="#registerForm">Registrarse</a></li>
                 </ul>
-
                 <div>
                     <!-- Login -->
                     <div id="loginForm">
@@ -31,7 +28,8 @@
                             <label>Contraseña</label>
                             <input type="password" placeholder="Ingrese su contraseña">
                             <button type="submit">Iniciar Sesión</button>
-                            <a href="#" data-bs-toggle="modal" data-bs-target="#resetPasswordModal">¿Olvidaste tu contraseña?</a>
+                            <a href="#" data-bs-toggle="modal" data-bs-target="#resetPasswordModal">¿Olvidaste tu
+                                contraseña?</a>
                         </form>
                     </div>
 
@@ -72,4 +70,5 @@
         </div>
     </div>
 </body>
+
 </html>
