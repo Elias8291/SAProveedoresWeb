@@ -18,6 +18,38 @@
             min-height: 100vh;
             background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
         }
+        .welcome-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+            z-index: 2000;
+            transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+        }
+
+        .welcome-screen.fade-out {
+            opacity: 0;
+            transform: scale(1.1);
+            pointer-events: none;
+        }
+
+        .welcome-logo {
+            width: 250px;
+            border: 3px solid white;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+            padding: 10px;
+            background: #e0e0e0;
+            animation: pulseAnimation 2s infinite;
+        }
+
+        @keyframes pulseAnimation {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
 
         .nav-tabs .nav-link {
             color: var(--primary-color);
@@ -42,7 +74,11 @@
 </head>
 
 <body>
-   
+    <div class="welcome-screen d-flex flex-column justify-content-center align-items-center">
+        <img src="{{ asset('imagenes/logo.png') }}" class="welcome-logo mb-4" alt="Logo Secretaría de Administración">
+        <h1 class="text-white text-center display-5 fw-bold" >Bienvenido al Sistema de<br>Control de Proveedores</h1>
+    </div>
+
     <div class="container min-vh-100 d-flex justify-content-center align-items-center py-5">
         <div class="card shadow-lg border-0 rounded-4 w-100" style="max-width: 500px;">
             <div class="card-body p-4 p-md-5">
